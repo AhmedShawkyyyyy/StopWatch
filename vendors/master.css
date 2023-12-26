@@ -1,0 +1,120 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+:root {
+  --main-font-family: "Bricolage Grotesque", sans-serif;
+  --main-color: #0ebac5;
+}
+
+section {
+  margin: auto;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    180deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(8, 7, 103, 1) 16%,
+    rgba(9, 9, 121, 1) 40%,
+    rgba(7, 52, 150, 1) 52%,
+    rgba(6, 66, 159, 1) 56%,
+    rgba(5, 95, 178, 1) 64%,
+    rgba(4, 113, 190, 1) 82%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--main-font-family);
+  color: var(--main-color);
+}
+
+section #timeZone {
+  width: 100%;
+  text-align: center;
+  font-size: 125px;
+  font-family: monospace;
+}
+
+section .data {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+section .data button {
+  border: none;
+  position: relative;
+  font-size: 45px;
+  /* border-radius: 68px; */
+  color: var(--main-color);
+  background: #000;
+  cursor: pointer;
+  width: calc(85% / 3);
+  height: 100px;
+  transition: all 0.2s linear 0s;
+  perspective: 230px;
+  line-height: 40px;
+}
+
+section .data button i {
+  color: var(--main-color);
+  float: right;
+  margin-right: 25px;
+}
+
+section .data button:before,
+section .data button:after {
+  position: absolute;
+  content: "";
+  right: 0;
+  bottom: 0;
+  background: #21ebff;
+  box-shadow: 0 0 5px #21ebff;
+  transition: all 0.3s ease;
+}
+section .data button:before {
+  height: 50%;
+  width: 2px;
+}
+section .data button:after {
+  width: 20%;
+  height: 2px;
+}
+section .data button:hover:before {
+  height: 100%;
+}
+section .data button:hover:after {
+  width: 100%;
+}
+section .data button span:before,
+section .data button span:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  background: #21ebff;
+  box-shadow: 0 0 5px #21ebff;
+  transition: all 0.3s ease;
+}
+section .data button span:before {
+  width: 2px;
+  height: 50%;
+}
+section .data button span:after {
+  height: 2px;
+  width: 20%;
+}
+section .data button span:hover:before {
+  height: 100%;
+}
+section .data button span:hover:after {
+  width: 100%;
+}
